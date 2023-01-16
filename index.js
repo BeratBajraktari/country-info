@@ -3,9 +3,9 @@ let countrySearch = document.getElementById("country-search");
 
 searchButton.addEventListener("click", () => {
     let countryName = countrySearch.value;
-    let finalURL = `https://restcountries.com/v3.1/name/${countryName}?fullText=true`;
-    console.log(finalURL);
-    fetch(finalURL)
+    let url = `https://restcountries.com/v3.1/name/${countryName}?fullText=true`;
+    console.log(url);
+    fetch(url)
     .then((response) => response.json())
     .then((data) => {
         result.innerHTML = `
